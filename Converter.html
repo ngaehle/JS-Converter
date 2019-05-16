@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+	
+<style>
+	body {
+		background-image: url(FahrenheitCelcius.jpg);
+		/*background-color: #75CDF1;*/
+	}
+	body h1 {
+		text-align: center;
+	}
+	body h3 {
+		text-align: center;
+	}
+	body h4 {
+		text-align: center;
+	}
+	form {
+	width: 20%;
+	margin-right: auto;
+	border-radius: 30px;
+	margin-left: auto;
+	color: #000000;
+	background-color: rgba(131,176,244,0.50);
+	font-family: aladin;
+	font-style: normal;
+	font-weight: 400;
+	text-transform: none;
+	text-align: left;
+	padding: 15px;
+	}
+</style>
+	
+<title>Converter</title>
+</head>
+
+<body>
+	<h1>Welcome to "Fahrenheit to Celcius" Temperature Scale Converter.</h1>
+	<h3>Created By: Nicole Gaehle</h3>
+	<h4>UMSL IS2800 Tutor Example</h4>
+	<form>
+		<p>Please enter in Fahrenheit Scale: <input id="num1" size="5" maxlength="5"></p>
+		<button type ="button" onclick="check_the_numbers()">Calculate Celcius</button>
+		<input type ="reset" name="reset" value="Clear Form"></input>
+		
+		<p>Please enter in Celcius Scale: <input type="text" id="num2" size="5" maxlength="5"></p>
+		<button type ="button" onclick="check_the_numbers2()">Calculate Fahrenheit</button>
+	<input type ="reset" name="reset" value="Clear Form"></input>
+	</form>
+	
+
+	<script>
+		var FtempVal = parseFloat(document.getElementById("num1").value);
+		var X = parseFloat(document.getElementById("num2").value);
+		
+		function check_the_numbers(){
+			<--!var X = parseFloat(document.getElementById("num1").value);-->
+			if (document.getElementById("num1").value == " "){
+				alert("You Must Enter A Value!!!");
+			}
+			else if (isNaN(X)){
+				alert ("Youe Must Enter A Value!!!!")
+			}
+			else {
+				var Y=(X-32)*(5/9);
+				document.write("<h1>Temperature of " + X + " degrees Fahrenheit is equal to: " + Y +" degrees Celcius</h1>");
+				document.write("<a href=JavaScript:history.back();>Click Here To Go Back</a>");
+			}
+		}
+		function check_the_numbers2(){
+			<!--var X = parseFloat(document.getElementById("num2").value);-->
+			if (document.getElementById("num2").value == " "){
+				alert("You Must Enter A Value!!!");
+			}
+			else if (isNaN(X)){
+				alert ("Youe Must Enter A Value!!!!")
+			}
+			else {
+				var Y=X*(9/5)+32;
+				document.write("<h1>Temperature of " + X + " degrees Celcius is equal to: " + Y +" degrees Fahrenheit</h1>");
+				document.write("<a href=JavaScript:history.back();>Click Here To Go Back</a>");
+			}
+		}
+	</script>
+</body>
+</html>
