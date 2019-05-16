@@ -47,7 +47,7 @@
     <h4>UMSL IS2800 Tutor Example</h4>
     <form>
         <p>Please enter in Fahrenheit Scale: <input id="num1" size="5" maxlength="5"></p>
-        <button type="button" onclick="to_celsius()">Calculate Celsius</button>
+        <input type="button" onclick="to_celsius()" value="Calculate Celsius" />
 
 
         <p>Please enter in Celsius Scale: <input type="text" id="num2" size="5" maxlength="5"></p>
@@ -68,7 +68,7 @@
 
             if (document.getElementById("num1").value == " ") {
                 alert("You Must Enter A Value!!!");
-            } else if (isNaN(ctempVal)) {
+            } else if (isNaN(ftempVal.value)) {
                 alert("You Must Enter A Value!!!!")
             } else {
                 var ftempVal = (ctempVal - 32) * (5 / 9);
@@ -81,7 +81,7 @@
 
             if (document.getElementById("num2").value == " ") {
                 alert("You Must Enter A Value!!!");
-            } else if (isNaN(ctempVal)) {
+            } else if (isNaN(ctempVal.value)) {
                 alert("You Must Enter A Value!!!!")
             } else {
                 var ftempVal = ctempVal * (9 / 5) + 32;
