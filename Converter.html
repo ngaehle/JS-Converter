@@ -47,10 +47,10 @@
     <h4>UMSL IS2800 Tutor Example</h4>
     <form>
         <p>Please enter in Fahrenheit Scale: <input id="num1" size="5" maxlength="5"></p>
-        <button type="button" onclick="check_the_numbers()">Calculate Celcius</button>
+        <button type="button" onclick="check_the_numbers()">Calculate Celsius</button>
         <input type="reset" name="reset" value="Clear Form"></input>
 
-        <p>Please enter in Celcius Scale: <input type="text" id="num2" size="5" maxlength="5"></p>
+        <p>Please enter in Celsius Scale: <input type="text" id="num2" size="5" maxlength="5"></p>
         <button type="button" onclick="check_the_numbers2()">Calculate Fahrenheit</button>
         <input type="reset" name="reset" value="Clear Form"></input>
     </form>
@@ -67,10 +67,10 @@
             if (document.getElementById("num1").value == " ") {
                 alert("You Must Enter A Value!!!");
             } else if (isNaN(X)) {
-                alert("Youe Must Enter A Value!!!!")
+                alert("You Must Enter A Value!!!!")
             } else {
                 var Y = (X - 32) * (5 / 9);
-                document.write("<h1>Temperature of " + ctempVal + " degrees Fahrenheit is equal to: " + ftempVal + " degrees Celcius</h1>");
+                document.write("<h1>Temperature of " + ctempVal + " degrees Fahrenheit is equal to: " + ftempVal + " degrees Celsius</h1>");
                 document.write("<a href=JavaScript:history.back();>Click Here To Go Back</a>");
             }
         }
@@ -80,10 +80,10 @@
             if (document.getElementById("num2").value == " ") {
                 alert("You Must Enter A Value!!!");
             } else if (isNaN(X)) {
-                alert("Youe Must Enter A Value!!!!")
+                alert("You Must Enter A Value!!!!")
             } else {
                 var Y = X * (9 / 5) + 32;
-                document.write("<h1>Temperature of " + ctempVal + " degrees Celcius is equal to: " + ftempVal + " degrees Fahrenheit</h1>");
+                document.write("<h1>Temperature of " + ctempVal + " degrees Celsius is equal to: " + ftempVal + " degrees Fahrenheit</h1>");
                 document.write("<a href=JavaScript:history.back();>Click Here To Go Back</a>");
             }
         }
