@@ -46,11 +46,11 @@
     <h3>Created By: Nicole Gaehle</h3>
     <h4>UMSL IS2800 Tutor Example</h4>
     <form>
-        <p>Please enter in Fahrenheit Scale: <input id="num1" size="5" maxlength="5"></p>
+        <p>Please enter in Fahrenheit Scale: <input id="temp" size="5" maxlength="5"></p>
         <input type="button" onclick="to_celsius()" value="Calculate Celsius" />
 
 
-        <p>Please enter in Celsius Scale: <input type="text" id="num2" size="5" maxlength="5"></p>
+        <p>Please enter in Celsius Scale: <input type="text" id="temp1" size="5" maxlength="5"></p>
         <button type="button" onclick="to_fahrenheit()">Calculate Fahrenheit</button>
         <br>
         <br>
@@ -61,33 +61,38 @@
 
 
     <script>
-        var ftempVal = parseFloat(document.getElementById("num1").value);
-        var ctempVal = parseFloat(document.getElementById("num2").value);
+        var fTempVal = document.getElementById("temp");
+        var cTempVal = document.getElementById("temp1");
+
 
         function to_celsius() {
 
-            if (document.getElementById("num1").value == " ") {
-                alert("You Must Enter A Value!!!");
-            } else if (isNaN(ftempVal.value)) {
-                alert("You Must Enter A Value!!!!")
+            if (document.getElementById("temp").value == "") {
+                alert("You must enter a number.");
+                return;
+            } else if (isNaN(fTempVal.value)) {
+                alert("Value entered is not a number, please try again");
+                return;
             } else {
-                var ftempVal = (ctempVal - 32) * (5 / 9);
-                document.write("<h1>Temperature of " + ctempVal + " degrees Fahrenheit is equal to: " + ftempVal + " degrees Celcius</h1>");
-                document.write("<a href=JavaScript:history.back();>Click Here To Go Back</a>");
+                var fTempCVal = (fTempVal.value - 32) * (5 / 9);
             }
+            document.write("A temperature of " + fTempVal.value + " degrees Fahrenheit is equal to: " + Math.round(fTempCVal) + " degrees Celsius" + '<br>' +
+                "<input type = 'button' value = 'Go back' onClick='history.go(0)'>");
         }
 
-        function to_fahrenheit() {
 
-            if (document.getElementById("num2").value == " ") {
-                alert("You Must Enter A Value!!!");
-            } else if (isNaN(ctempVal.value)) {
-                alert("You Must Enter A Value!!!!")
+        function to_fahrenheit() {
+            if (document.getElementById("temp1").value == "") {
+                alert("You must enter a number.");
+                return;
+            } else if (isNaN(cTempVal.value)) {
+                alert("Value entered is not a number, please try again");
+                return;
             } else {
-                var ftempVal = ctempVal * (9 / 5) + 32;
-                document.write("<h1>Temperature of " + ctempVal + " degrees Celsius is equal to: " + ftempVal + " degrees Fahrenheit</h1>");
-                document.write("<a href=JavaScript:history.back();>Click Here To Go Back</a>");
+                var fTempCVal = cTempVal.value * 9 / 5 + 32;
             }
+            document.write("A temperature of " + cTempVal.value + " degrees Celsius is equal to: " + Math.round(fTempCVal) + " degrees Fahrenheit" + '<br>' +
+                "<input type = 'button' value = 'Go back' onClick='history.go(0)'>");
         }
     </script>
 </body>
