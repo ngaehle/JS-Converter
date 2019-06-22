@@ -46,11 +46,11 @@
     <h3>Created By: Nicole Gaehle</h3>
     <h4>UMSL IS2800 Tutor Example</h4>
     <form>
-        <p>Please enter in Fahrenheit Scale: <input id="temp" size="5" maxlength="5"></p>
+        <p>Please enter in Fahrenheit Scale: <input id="fahrenheit" size="5" maxlength="5"></p>
         <input type="button" onclick="to_celsius()" value="Calculate Celsius" />
 
 
-        <p>Please enter in Celsius Scale: <input type="text" id="temp1" size="5" maxlength="5"></p>
+        <p>Please enter in Celsius Scale: <input type="text" id="celsius" size="5" maxlength="5"></p>
         <button type="button" onclick="to_fahrenheit()">Calculate Fahrenheit</button>
         <br>
         <br>
@@ -61,17 +61,17 @@
 
 
     <script>
-        var fTempVal = document.getElementById("temp");
-        var cTempVal = document.getElementById("temp1");
+        var fTempVal = document.getElementById("fahrenheit");
+        var cTempVal = document.getElementById("celsius");
 
 
         function to_celsius() {
 
-            if (document.getElementById("temp").value == "") {
-                alert("You must enter a number.");
+            if (document.getElementById("fahrenheit").value == "") {
+                alert("You must enter a value!");
                 return;
             } else if (isNaN(fTempVal.value)) {
-                alert("Value entered is not a number, please try again");
+                alert("You must enter number value! Please try again.");
                 return;
             } else {
                 var fTempCVal = (fTempVal.value - 32) * (5 / 9);
@@ -82,11 +82,11 @@
 
 
         function to_fahrenheit() {
-            if (document.getElementById("temp1").value == "") {
-                alert("You must enter a number.");
+            if (document.getElementById("celsius").value == "") {
+                alert("You must enter a value!");
                 return;
             } else if (isNaN(cTempVal.value)) {
-                alert("Value entered is not a number, please try again");
+                alert("You must enter number value! Please try again.");
                 return;
             } else {
                 var fTempCVal = cTempVal.value * 9 / 5 + 32;
