@@ -47,10 +47,12 @@
     <h4>UMSL IS2800 Tutor Example</h4>
     <form>
         <p>Please enter in Fahrenheit Scale: <input id="fahrenheit" size="5" maxlength="5"></p>
+        <input placeholder="Enter Fahrenheit" id="fahrenheit" />
         <input type="button" onclick="to_celsius()" value="Calculate Celsius" />
 
 
         <p>Please enter in Celsius Scale: <input type="text" id="celsius" size="5" maxlength="5"></p>
+        <input placeholder="Enter Celsius" id="celsius" />
         <button type="button" onclick="to_fahrenheit()">Calculate Fahrenheit</button>
         <br>
         <br>
@@ -61,13 +63,13 @@
 
 
     <script>
-        var fahrenheit = document.getElementById("fahrenheit");
-        var celsius = document.getElementById("celsius");
+        var fahrenheitVal = document.getElementById("fahrenheit");
+        var celsiusVal = document.getElementById("celsius");
 
 
         function to_celsius() {
 
-            if (document.getElementById("fahrenheit").value == "") {
+            if (document.getElementById("fahrenheitVal").value == "") {
                 alert("You must enter a value!");
                 return;
             } else if (isNaN(fTempVal.value)) {
@@ -82,7 +84,7 @@
 
 
         function to_fahrenheit() {
-            if (document.getElementById("celsius").value == "") {
+            if (document.getElementById("celsiusVal").value == "") {
                 alert("You must enter a value!");
                 return;
             } else if (isNaN(cTempVal.value)) {
