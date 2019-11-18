@@ -47,11 +47,11 @@
     <h4>UMSL IS2800 Tutor Example</h4>
     <form>
         <p>Please enter in Fahrenheit Scale: <input placeholder="Enter Fahrenheit" id="fahrenheit" size="20" maxlength="20"></p>
-        <input type="button" onclick="to_celsius()" value="Calculate Celsius" />
+        <input type="button" onclick="toCelsius()" value="Calculate Celsius" />
 
 
         <p>Please enter in Celsius Scale: <input placeholder="Enter Celsius" id="celsius" size="20" maxlength="20"></p>
-        <button type="button" onclick="to_fahrenheit()">Calculate Fahrenheit</button>
+        <button type="button" onclick="toFahrenheit()">Calculate Fahrenheit</button>
         <br>
         <br>
         <hr>
@@ -65,7 +65,7 @@
         var celsiusVal = document.getElementById("celsius");
 
 
-        function to_celsius() {
+        function toCelsius() {
 
             if (document.getElementById("fahrenheitVal").value == "") {
                 alert("You must enter a value!");
@@ -81,7 +81,7 @@
         }
 
 
-        function to_fahrenheit() {
+        function toFahrenheit() {
             if (document.getElementById("celsiusVal").value == "") {
                 alert("You must enter a value!");
                 return;
