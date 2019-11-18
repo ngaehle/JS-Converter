@@ -61,13 +61,13 @@
 
 
     <script>
-        var fahrenheitVal = document.getElementById("fahrenheit");
-        var celsiusVal = document.getElementById("celsius");
+        var fTempVal = document.getElementById("fahrenheit");
+        var cTempVal = document.getElementById("celsius");
 
 
         function toCelsius() {
 
-            if (document.getElementById(fahrenheitVal).value == "") {
+            if (document.getElementById(fTempVal).value == "") {
                 alert("You must enter a value!");
                 return;
             } else if (isNaN(fTempVal.value)) {
@@ -82,7 +82,7 @@
 
 
         function toFahrenheit() {
-            if (document.getElementById(celsiusVal).value == "") {
+            if (document.getElementById(cTempVal).value == "") {
                 alert("You must enter a value!");
                 return;
             } else if (isNaN(cTempVal.value)) {
