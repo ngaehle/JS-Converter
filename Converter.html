@@ -65,13 +65,15 @@
         var cTempVal = document.getElementById("celsius");
 
 
+
+
         function toCelsius() {
 
-            if (document.getElementById(fTempVal).value = "") {
-                alert("You must enter a value!");
+            if (document.getElementById("temp").value == "") {
+                alert("You must enter a number.");
                 return;
             } else if (isNaN(fTempVal.value)) {
-                alert("You must enter number value! Please try again.");
+                alert("Value entered is not a number, please try again");
                 return;
             } else {
                 var fTempCVal = (fTempVal.value - 32) * (5 / 9);
@@ -82,11 +84,11 @@
 
 
         function toFahrenheit() {
-            if (document.getElementById(fTempVal).value = "") {
-                alert("You must enter a value!");
+            if (document.getElementById("temp1").value == "") {
+                alert("You must enter a number.");
                 return;
             } else if (isNaN(cTempVal.value)) {
-                alert("You must enter number value! Please try again.");
+                alert("Value entered is not a number, please try again");
                 return;
             } else {
                 var fTempCVal = cTempVal.value * 9 / 5 + 32;
